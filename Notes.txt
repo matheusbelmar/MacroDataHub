@@ -1,0 +1,30 @@
+Fix pytest
+Learn about pyproject.toml, setup.py
+The fuck is tox
+The duck is Ruff, or a linter whatsoever
+
+
+MacroDataHub/
+│
+├── ingestion/               ← Scrapers e ingestores por fonte (BACEN, IBGE, FMI, etc)
+│
+├── pipelines/               ← Transformações (ETL/ELT), limpeza, normalização, validação
+│
+├── storage/                 ← Armazenamento local ou remoto (parquet, csv, db, etc)
+│
+├── datasets/                ← Dados organizados por tema (IPCA, PIB, Balanço de Pagamentos)
+│
+├── visualizations/          ← Dashboards, gráficos, notebooks explicativos
+│
+├── reports/                 ← Relatórios gerados em PDF, HTML, Markdown
+│
+├── models/                  ← Modelos de machine learning ou nowcasting
+│
+├── config/                  ← Configs de APIs, datasources, credenciais
+│
+├── utils/                   ← Funções auxiliares reutilizáveis
+│
+├── tests/                   ← Testes unitários e de integração
+│
+├── README.md
+└── requirements.txt
