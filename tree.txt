@@ -1,0 +1,42 @@
+.
+├── Makefile
+├── models
+├── notebooks
+├── pyproject.toml
+├── README.md
+├── references
+├── reports
+│   └── figures
+├── src
+│   ├── 000 - Tests
+│   │   └── Original
+│   │       ├── config.py
+│   │       ├── dataset.py
+│   │       ├── features.py
+│   │       ├── __init__.py
+│   │       ├── modeling
+│   │       │   ├── __init__.py
+│   │       │   ├── predict.py
+│   │       │   └── train.py
+│   │       └── plots.py
+│   ├── 002 - Models
+│   ├── 003 - Reports
+│   ├── data
+│   │   ├── datasets
+│   │   └── raw_storage
+│   └── MacroDataHub
+│       ├── config.py
+│       ├── extractions
+│       │   ├── SGS.py
+│       │   └── Sidra.py
+│       ├── Main.py
+│       ├── transformations
+│       └── utils
+│           ├── dir_eng.py
+│           ├── Metadata.ods
+│           └── Super_Scraper.py
+├── tests
+│   └── test_data.py
+└── tree.txt
+
+19 directories, 20 files
