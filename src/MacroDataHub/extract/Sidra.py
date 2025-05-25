@@ -1,17 +1,22 @@
-import os
 import json
-import pandas as pd
 import requests as req
-from Projetos.MacroDataHub.src.MacroDataHub.extract.SuperClass import BaseScraper
+from src.MacroDataHub.extract.Super import DataImporter
 
+class Scraper(DataImporter):
+    def __init__(self, name, code, req_config = {}):
+        BASE_URL  = r'https://apisidra.ibge.gov.br/'
 
-os.chdir(r"/home/mbelmar/Documentos/Programaçao - Projetos/Projetos/MacroDataHub/src")
+    def build_url(self):
 
-class Scraper(BaseScraper):
-    def __init__(self, name, code):
-        self.Base_link  = r'https://apisidra.ibge.gov.br/values/{}?formato=json'.format(code)
-        self.Code       = code
-        self.data_name  = name
+        """Builds SIDRA-specific URL using the 'code' and other config."""
+        if not self.code:
+            raise ValueError("Code is required for SIDRA scraper.")
+        
+        """For later features"""
+        if "Req_Build" not in self.req_config:
+            format_suffix = r'values/{}?formato=json'.format(self.code)
+        
+        return self.BASE_URL+format_suffix
 
     def fetch(self):
         response=req.get(self.Base_link).json()

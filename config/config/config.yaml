@@ -1,0 +1,6 @@
+paths:
+  config_dir: "config"
+  data_dir: "data"
+  raw_datasets_dir: "data/raw_storage"
+  cleaned_datasets_dir: "data/cleaned_storage"
+  metadata_file: "config/metadata.yaml"
