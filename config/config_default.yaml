@@ -6,3 +6,8 @@ paths:
 setting:
   initialized: false
   debug_mode: true
+Catalog:
+  csv_: false
+  postgres_: false
+Warehousing:
+  InProd: false

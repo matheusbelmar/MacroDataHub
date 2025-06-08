@@ -2,7 +2,13 @@ paths:
   config_dir: "config"
   data_dir: "data"
   metadata_file: "config/metadata.yaml"
-  project_home: null
+  project_home: "/home/mbelmar/Documentos/Programaçao - Projetos/Projetos/MacroDataHub/config/config.yaml"
 setting:
   initialized: false
   debug_mode: true
+Catalog:
+  csv_: false
+  postgres_: false
+Warehousing:
+  InProd: false
+   

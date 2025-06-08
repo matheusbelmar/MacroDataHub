@@ -1,0 +1,28 @@
+lakehouse_framework/
+├── cli/
+│   └── main.py                     # CLI principal com Typer
+├── core/
+│   ├── ports/
+│   │   ├── storage_port.py         # Interface para armazenamento
+│   │   └── format_port.py          # Interface para escrita (csv, parquet, iceberg)
+│   ├── services/
+│   │   └── series_service.py       # Orquestra lógica: baixar, retornar ou salvar
+│   └── models/
+│       └── series.py               # Modelo base para séries de dados
+├── adapters/
+│   ├── scrapers/
+│   │   └── ibge_scraper.py         # Exemplo de fonte de dados
+│   ├── storage/
+│   │   ├── local_storage.py        # Implementação local
+│   │   └── minio_storage.py        # Implementação MinIO
+│   └── formats/
+│       ├── csv_writer.py           # Escrita em CSV
+│       └── parquet_writer.py       # Escrita em Parquet
+├── config/
+│   ├── settings.yaml               # Configurações do usuário
+│   └── environment.py              # Carregador de config/env
+├── catalog/
+│   └── registry.py                 # (Futuro) registrar tabela no catálogo
+├── utils/
+│   └── paths.py                    # Construção de caminhos locais / MinIO
+└── requirements.txt
