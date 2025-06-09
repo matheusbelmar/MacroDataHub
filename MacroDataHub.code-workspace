@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "src/MacroDataHub_V2"
 		}
 	],
 	"settings": {}
