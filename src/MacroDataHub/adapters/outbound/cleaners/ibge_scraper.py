@@ -3,19 +3,17 @@
 import json
 import requests as req
 import pandas as pd
-from core.models.series import Series
+from domain.models.series import Series
 from adapters.storage.local_storage import LocalStorageAdapter as LSA
 
 class IBGEScraper:
     BASE_URL = 'https://apisidra.ibge.gov.br/'
 
-    def __init__(self, name: str, code: str, path:str, req_config: dict = {}):
+    def __init__(self, name: str, code: str, path:str, req_config: dict = {}, default_parser=True):
         self.name = name
         self.code = code
-        self.Dumper = LSA(base_path= path)
-        
-        
         self.req_config = req_config
+        self.Dumper = LSA(base_path=path)
 
     def build_url(self) -> str:
         if not self.code:
@@ -53,3 +51,4 @@ scraper=IBGEScraper(name="IPCA",
                     path='/home/mbelmar/Documentos/Programaçao - Projetos/Projetos/MacroDataHub/data/raw_storage')
 
 scraper.run()
+

@@ -5,11 +5,11 @@ class StoragePort(ABC):
     def save_raw(self, series_id: str, data: dict) -> None:
         """Store raw data given a unique series ID"""
         pass
-#
-#    @abstractmethod
-#    def load_raw(self, series_id: str) -> dict:
-#        """Load raw data given a series ID"""
-#        pass
+
+    @abstractmethod
+    def load_raw(self, series_id: str) -> dict:
+        """Load raw data given a series ID"""
+        pass
 #
 #    @abstractmethod
 #    def save_curated(self, series_id: str, df) -> None:

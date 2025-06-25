@@ -11,3 +11,6 @@ class LocalStorageAdapter(StoragePort):
         path = os.path.join(self.base_path, f"{series_id}.json")
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
+
+    def load_raw(self, series_id: str) -> dict:
+        raise NotImplementedError("load_raw() is not implemented yet.")
