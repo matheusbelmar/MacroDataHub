@@ -1,10 +1,9 @@
 
-# Conteúdo de adapters/scrapers/ibge_scraper.py
 import json
 import requests as req
 import pandas as pd
 from domain.models.series import Series
-from adapters.storage.local_storage import LocalStorageAdapter as LSA
+from adapters.outbound.storage.local_storage import LocalStorageAdapter as LSA
 
 class IBGEScraper:
     BASE_URL = 'https://apisidra.ibge.gov.br/'
@@ -41,7 +40,7 @@ class IBGEScraper:
             path=f"ibge/{self.name.lower()}"
         )
     
-    def run(self):
+    def Scrap(self):
         Response=self.fetch()
         self.Dumper.save_raw(series_id=self.name,
                              data=Response)
@@ -50,5 +49,5 @@ scraper=IBGEScraper(name="IPCA",
                     code=r"T/7060/P/all/V/63/C315/all/N1/1", 
                     path='/home/mbelmar/Documentos/Programaçao - Projetos/Projetos/MacroDataHub/data/raw_storage')
 
-scraper.run()
+scraper.Scrap()
 
