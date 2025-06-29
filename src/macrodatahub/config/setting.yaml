@@ -1,0 +1,37 @@
+# config/settings.yaml
+
+environment: development  # or production
+
+Base_dir: /home/mbelmar/Documentos/Programaçao - Projetos/Projetos/MacroDataHub/data
+
+Storage:
+  use_minio: false
+  use_local: True
+  local:
+    raw_path: data/raw
+    treated_path: data/treated
+    reports_path: data/reports
+  minio:
+    endpoint: localhost:9000
+    access_key: minioadmin
+    secret_key: minioadmin
+    bucket: macrodatahub
+
+Cleaned_format:
+  csv_active: True
+  Parquet_active: False
+  options:
+    parquet:
+      compression: snappy
+    csv:
+      delimiter: ','
+
+#catalog:
+#  registry_path: catalog/registry.yaml
+#
+#logging:
+#  level: INFO
+#
+#orchestrator:
+#  enabled: airflow   # or dagster, or null
+#  dag_folder: dags/
