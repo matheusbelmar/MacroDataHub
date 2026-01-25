@@ -1,49 +1,27 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "MacroDataHub"
-version = "0.0.1"
-description = "Macroeconomic data and analysis centralizer"
-authors = [
-  { name = "Belmar" },
-]
-
-readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    
-]
+version = "0.1.0"
+description = "Framework para captura e processamento de dados macroeconômicos"
 dependencies = [
-    "ipython",
-    "jupyterlab",
-    "loguru",
-    "matplotlib",
-    "mkdocs",
-    "notebook",
-    "numpy",
+    "requests",
     "pandas",
-    "pip",
-    "pytest",
-    "python-dotenv",
-    "ruff",
-    "scikit-learn",
-    "tqdm",
-    "typer",
 ]
-requires-python = "~=3.10.0"
 
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+    "responses",
+    "ruff"
+]
 
-[tool.ruff]
-line-length = 99
-src = ["MacroDataHub"]
-include = ["pyproject.toml", "MacroDataHub/**/*.py"]
+[tool.setuptools.packages.find]
+where = ["src"]
 
-[tool.ruff.lint]
-extend-select = ["I"]  # Add import sorting
-
-[tool.ruff.lint.isort]
-known-first-party = ["MacroDataHub"]
-force-sort-within-sections = true
-
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
