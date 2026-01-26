@@ -1,0 +1,13 @@
+pyproject.toml
+src/MacroDataHub.egg-info/PKG-INFO
+src/MacroDataHub.egg-info/SOURCES.txt
+src/MacroDataHub.egg-info/dependency_links.txt
+src/MacroDataHub.egg-info/requires.txt
+src/MacroDataHub.egg-info/top_level.txt
+src/mdb/__init__.py
+src/mdb/adapters/scrapers/ibge/ibge_cleaner.py
+src/mdb/adapters/scrapers/ibge/ibge_scraper.py
+src/mdb/adapters/scrapers/ibge/tests/conftest.py
+src/mdb/adapters/scrapers/ibge/tests/test_scraper.py
+src/mdb/adapters/scrapers/sgs/bcb_cleaner.py
+src/mdb/adapters/scrapers/sgs/bcb_scraper.py

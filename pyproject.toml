@@ -5,7 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "MacroDataHub"
 version = "0.1.0"
-description = "Framework para captura e processamento de dados macroeconômicos"
+description = "Framework for ingestion, processing, and distribution of macroeconomic data"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Matheus Belmar", email = "matheusleal2596@gmail.com"}
+]
 dependencies = [
     "requests",
     "pandas",
@@ -16,7 +21,7 @@ dev = [
     "pytest",
     "pytest-mock",
     "responses",
-    "ruff"
+    "ruff",
 ]
 
 [tool.setuptools.packages.find]
@@ -25,3 +30,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff]
+src = ["src"]
+line-length = 88

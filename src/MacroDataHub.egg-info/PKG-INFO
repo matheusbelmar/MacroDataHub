@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: MacroDataHub
+Version: 0.1.0
+Summary: Framework for ingestion, processing, and distribution of macroeconomic data
+Author-email: Matheus Belmar <matheusleal2596@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: responses; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
